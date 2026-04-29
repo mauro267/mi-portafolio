@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+<script src="script.js"></script>
 
 <!-- ENCABEZADO -->
 <header>
@@ -56,11 +57,21 @@
 </section>
 
 <!-- CONTACTO -->
+<!-- CONTACTO -->
 <section>
     <h2>Contacto</h2>
-    <p>¿Tienes un proyecto? Hablemos.</p>
-    <a href="mailto:tu@email.com" class="boton">Escribirme</a>
-</section>
+    <p>¿Tienes un proyecto? Escríbeme y te respondo en menos de 24 horas.</p>
 
+    <form id="formulario" action="https://formspree.io/f/mrernazv" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <textarea name="mensaje" placeholder="Cuéntame tu proyecto..." rows="4" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <p id="confirmacion" style="display:none; color: #22c55e; margin-top: 16px;">
+        ¡Mensaje enviado! Te respondo pronto.
+    </p>
+</section>
 </body>
 </html>
